@@ -51,6 +51,7 @@ namespace RegularExpressionAssignment
             Console.WriteLine("\nPassword Rules");
             Console.WriteLine("Rule 1 : Minimum 8 Character");
             Console.WriteLine("Rule 1 : Atleast one Uppercase letter");
+            Console.WriteLine("Rule 1 : Atleast one numeric number");
             Console.WriteLine("\n\nEnter your Password : ");
             string password = Console.ReadLine(); //storing password entered by user in variable
             bool checkPassword = Validation.PasswordValidation(password); //Calling method to check password follows all the rules or not with argument

@@ -75,7 +75,7 @@ namespace RegularExpressionAssignment
 
         public static bool PasswordValidation(string password) // Creating a method for password validation
         {
-            string pattern = "^(?=.*[A-Z])(?=.{8,})"; // Regex for password validation up to rule 2
+            string pattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.{8,})"; // Regex for password validation up to rule 2
             //If password entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(password, pattern))
             {
