@@ -21,7 +21,7 @@ namespace RegularExpressionAssignment
             if (!checkFirstName)//If not valid then ask user to enter first name again
                 goto Firstname;
 
-           // User Last name validation
+            // User Last name validation
             Lastname:
             Console.WriteLine("\nNote : Your Last name should start with Capital Letter only and has minimum 3 Character and no space between letters");
             Console.WriteLine("\n\nEnter your last name : ");
@@ -48,11 +48,12 @@ namespace RegularExpressionAssignment
 
             //user Password validation
             Password:
-            Console.WriteLine("Password Rules");
+            Console.WriteLine("\nPassword Rules");
             Console.WriteLine("Rule 1 : Minimum 8 Character");
+            Console.WriteLine("Rule 1 : Atleast one Uppercase letter");
             Console.WriteLine("\n\nEnter your Password : ");
             string password = Console.ReadLine(); //storing password entered by user in variable
-            bool checkPassword = Validation.MobileNumberValidation(password); //Calling method to check password follows all the rules or not with argument
+            bool checkPassword = Validation.PasswordValidation(password); //Calling method to check password follows all the rules or not with argument
             if (!checkPassword)//If not follow then ask user to enter password again
                 goto Password;
             Console.ReadLine();
