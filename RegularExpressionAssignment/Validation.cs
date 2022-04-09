@@ -63,12 +63,12 @@ namespace RegularExpressionAssignment
             //If Mobile Number entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(mobileNo, pattern))
             {
-                Console.WriteLine($"\nYour Email address \"{mobileNo}\" is valid");
+                Console.WriteLine($"\nYour Mobile Number \"{mobileNo}\" is valid");
                 return true;
             }
             else
             {
-                Console.WriteLine($"\nYour Email address \"{mobileNo}\" is not valid");
+                Console.WriteLine($"\nYour Mobile Number \"{mobileNo}\" is not valid");
                 return false;
             }
         }
