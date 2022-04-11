@@ -56,10 +56,9 @@ namespace RegularExpressionAssignment
                 return false;
             }
         }
-
         public static bool MobileNumberValidation(string mobileNo) // Creating a method for Mobile Number validation
         {
-            string pattern = "^[0-9]{1,15}[][0-9]{10}$"; // Regex for Mobile number validation
+            string pattern = "^[0-9]{1,15}[ ][0-9]{10}$"; // Regex for Mobile number validation
             //If Mobile Number entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(mobileNo, pattern))
             {
@@ -72,12 +71,11 @@ namespace RegularExpressionAssignment
                 return false;
             }
         }
-
         public static bool PasswordValidation(string password) // Creating a method for password validation
         {
-            string pattern = "^(?=.*[A-Z])(?=.*[0-9])(?=.{8,})"; // Regex for password validation up to rule 2
+            string pattern1 = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,}$"; // Regex for password validation up to rule 4
             //If password entered by user is match with regex then it is valid otherwise not
-            if (Regex.IsMatch(password, pattern))
+            if (Regex.IsMatch(password, pattern1))
             {
                 Console.WriteLine($"\nYour password \"{password}\" is valid");
                 return true;
@@ -88,7 +86,6 @@ namespace RegularExpressionAssignment
                 return false;
             }
         }
-
     }
 }
 
