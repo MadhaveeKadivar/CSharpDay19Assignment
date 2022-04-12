@@ -73,7 +73,7 @@ namespace RegularExpressionAssignment
             }
         }
 
-        public bool PasswordRule1Validation(string password) // Creating a method for password validation
+        public static bool PasswordRule1Validation(string password) // Creating a method for password validation
         {
             //Rule -1 Minimum 8 characters
             string patternForRule1 = "^[0-9a-zA-Z@#$%^&*!+=]{8,}$"; // Regex for password validation rule 1
