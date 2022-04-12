@@ -73,11 +73,13 @@ namespace RegularExpressionAssignment
             }
         }
 
-        public static bool PasswordValidation(string password) // Creating a method for password validation
+        public bool PasswordRule1Validation(string password) // Creating a method for password validation
         {
-            string pattern = "^[a-z]{8}$"; // Regex for password validation
+            //Rule -1 Minimum 8 characters
+            string patternForRule1 = "^[0-9a-zA-Z@#$%^&*!+=]{8,}$"; // Regex for password validation rule 1
+            
             //If password entered by user is match with regex then it is valid otherwise not
-            if (Regex.IsMatch(password, pattern))
+            if (Regex.IsMatch(password, patternForRule1))
             {
                 Console.WriteLine($"\nYour password \"{password}\" is valid");
                 return true;
@@ -88,7 +90,6 @@ namespace RegularExpressionAssignment
                 return false;
             }
         }
-
     }
 }
 
