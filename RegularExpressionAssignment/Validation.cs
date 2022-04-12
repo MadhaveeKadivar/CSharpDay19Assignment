@@ -58,7 +58,7 @@ namespace RegularExpressionAssignment
         }
         public static bool MobileNumberValidation(string mobileNo) // Creating a method for Mobile Number validation
         {
-            string pattern = "^[0-9]{1,15}[ ][0-9]{10}$"; // Regex for Mobile number validation
+            string pattern = "^[9][1][ ][6-9][0-9]{9}$"; // Regex for Mobile number validation
             //If Mobile Number entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(mobileNo, pattern))
             {
@@ -71,8 +71,58 @@ namespace RegularExpressionAssignment
                 return false;
             }
         }
-        public static bool PasswordValidation(string password) // Creating a method for password validation
+         public static bool PasswordRule1Validation(string password) // Creating a method for password validation
         {
+            //Rule -1 Minimum 8 characters
+            string patternForRule1 = "^[0-9a-zA-Z@#$%^&*!+=]{8,}$"; // Regex for password validation rule 1
+            
+            //If password entered by user is match with regex then it is valid otherwise not
+            if (Regex.IsMatch(password, patternForRule1))
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is valid");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is not follow password rules");
+                return false;
+            }
+        }
+        public static bool PasswordRule2Validation(string password) // Creating a method for password validation
+        {
+            //Rule - 2 Atleast 1 Capital Letter
+            string patternForRule2 = "^(?=.*[A-Z])[0-9a-zA-Z@#$%^&*!+=]{8,}$"; // Regex for password validation rule 2
+            //If password entered by user is match with regex then it is valid otherwise not
+            if (Regex.IsMatch(password, patternForRule2))
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is valid");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is not follow password rules");
+                return false;
+            }
+        }
+        public static bool PasswordRule3Validation(string password) // Creating a method for password validation
+        {
+            //Rule - 3 Atleast 1 Numeric number
+            string patternForRule3 = "^(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z@#$%^&*!+=]{8,}$"; // Regex for password validation rule 3
+            //If password entered by user is match with regex then it is valid otherwise not
+            if (Regex.IsMatch(password, patternForRule3))
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is valid");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"\nYour password \"{password}\" is not follow password rules");
+                return false;
+            }
+        }
+        public static bool PasswordRule4Validation(string password) // Creating a method for password validation
+        {
+            // Rule - 4 Hase exactly one special character
             string pattern1 = @"^((?=.{8,}$)(?=.*[0-9])(?=.*[A-Z])[A-Za-z0-9]{0,30}?[@~!#$%^&+*]{1}[a-zA-Z0-9]{0,30})$"; // Regex for password validation up to rule 4
             //If password entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(password, pattern1))
