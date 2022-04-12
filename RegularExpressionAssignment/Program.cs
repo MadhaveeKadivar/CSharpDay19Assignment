@@ -54,7 +54,7 @@ namespace RegularExpressionAssignment
             Console.WriteLine("Rule 1 : Atleast one numeric number");
             Console.WriteLine("\n\nEnter your Password : ");
             string password = Console.ReadLine(); //storing password entered by user in variable
-            bool checkPassword = Validation.PasswordValidation(password); //Calling method to check password follows all the rules or not with argument
+            bool checkPassword = Validation.PasswordRule3Validation(password); //Calling method to check password follows all the rules or not with argument
             if (!checkPassword)//If not follow then ask user to enter password again
                 goto Password;
             Console.ReadLine();
