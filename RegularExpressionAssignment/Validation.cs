@@ -59,7 +59,7 @@ namespace RegularExpressionAssignment
 
         public static bool MobileNumberValidation(string mobileNo) // Creating a method for Mobile Number validation
         {
-            string pattern = "^[0-9]{1,15}[][0-9]{10}$"; // Regex for Mobile number validation
+            string pattern = "^[9][1][ ][6-9][0-9]{9}$"; // Regex for Mobile number validation
             //If Mobile Number entered by user is match with regex then it is valid otherwise not
             if (Regex.IsMatch(mobileNo, pattern))
             {
